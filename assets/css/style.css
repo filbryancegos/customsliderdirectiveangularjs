@@ -1,0 +1,56 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+#slider {
+    margin: 2em auto;
+    width: 800px;
+    overflow: hidden;
+    
+}
+
+#slide-wrapper {
+    position: relative;
+    transition: all .2s;
+}
+
+.slide {
+    float: left;
+    width: 800px;
+    position: relative;
+    overflow: hidden;
+   
+}
+img {
+    width: 800px
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+}
+
+.prev {
+    left: 0;
+}
+.next {
+    right: 0;
+}
+
+.prev button,
+.next button {
+    background: #80807b;
+    padding: 10px 20px;
+    color: #fff;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.prev button:disabled,
+.next button:disabled {
+    opacity: .2;
+    cursor: default;
+}

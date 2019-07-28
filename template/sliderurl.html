@@ -1,0 +1,15 @@
+<div>
+        <div id="slider">
+                <div id="slide-wrapper" ng-style="{'transform': slidewidth, 'width': sliderParent}">
+                    <div class="slide" ng-repeat="photo in photos">
+                        <img ng-src="{{photo.url}}"/>
+                        <p>{{photo.content}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="arrows">
+            <a href="" class="prev" ng-click="prev()" ><button ng-disabled="buttondisabledprev">prev</button></a>
+            <a href="" class="next" ng-click="next()" ><button ng-disabled="buttondisablednext">next</button></a>
+            </div>
+</div>
+
