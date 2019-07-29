@@ -55,12 +55,18 @@ app.directive('photoInfo', function() {
 
             scope.sliderParent = sliderWrappertotal;
             scope.count = 0;
-            scope.currentIndex = 0
+            scope.currentIndex = 1
 
             scope.nextBol = true;
             scope.prevBol = true;
             scope.buttondisablednext = false; 
-            scope.buttondisabledprev = true; 
+            scope.buttondisabledprev = false;
+            
+            scope.count = scope.count + -800;
+            var countwidht = scope.count + "px"
+            scope.slidewidth = 'translate('+ countwidht +')';
+
+
             scope.next = function(){
 				if (scope.currentIndex < scope.photos.length -1) {
                     scope.currentIndex++;
@@ -69,7 +75,7 @@ app.directive('photoInfo', function() {
                     scope.currentIndex = 0;
                     scope.count = 0;
                 }
-                var countwidht = scope.count + "px"
+                var countwidht = scope.count + "px";
                 scope.slidewidth = 'translate('+ countwidht +')';
                 if (scope.currentIndex == scope.photos.length -1) {
                     scope.buttondisablednext = true;
